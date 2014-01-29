@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <widget xmlns = "http://www.w3.org/ns/widgets" 
         xmlns:gap = "http://phonegap.com/ns/1.0"
-                id = "it.venerons.APPLICATION"
+                id = "lp.tattoos.mobileapp"
                 version = "1.0.0"
                 versionCode = "1">
 
-    <name>APPLICATION NAME</name>
+    <name>Lance Perlich Tattoos</name>
 
     <description>
-        APPLICATION DESCRIPTION
+        Lance Perlich Tattoo's Mobile App. Easy to check bookings,view art, get directions, and more!
     </description>
 
-    <author href="http://venerons.github.io" email="veneronslaboratories@gmail.com">Daniele Veneroni</author>
+    <author href="http://innovativewebmanagement.com" email="mattcw13@gmail.com">Innovative Web</author>
         
     <!-- ICONS -->
         
