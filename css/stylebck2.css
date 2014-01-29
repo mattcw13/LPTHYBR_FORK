@@ -529,13 +529,8 @@ background-color:transparent;
 	line-height: 1em;
 	margin-top: 44px;
 	font-weight: 400;
-	padding-bottom: 114px;
+	padding-bottom: 54px;
 background-color:rgba(0, 0, 0, 0.32);
-min-height: 460px;
-max-height: 960px;
-min-width: 320px;
-max-width: 640px;
-}
 }
 input, textarea {
 	display: block;

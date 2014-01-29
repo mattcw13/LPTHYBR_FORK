@@ -28,7 +28,16 @@
   -webkit-tap-highlight-color: transparent; /* For some Androids */
   }
   .swiper-container {
-     min-width: 320px;
+  height:100%;
+  width:100%;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+	}
+	    .swiper-container1 {
+       min-width: 320px;
     min-height: 480px;
 	max-width:640px;
 	max-height:960px;
@@ -37,7 +46,7 @@
     -moz-perspective: 1200px;
     -ms-perspective: 1200px;
 
-	}
+  }
     .swiper-container2 {
        min-width: 320px;
     min-height: 480px;
@@ -93,17 +102,8 @@
     -ms-perspective: 1200px;
     perspective: 1200px;
   }
-  .swiper-container7 {
-      min-width: 320px;
-    min-height: 480px;
-	max-width:640px;
-	max-height:960px;
-    background: rgba(0, 0, 0, 0.06);
-    -webkit-perspective: 1200px;
-    -moz-perspective: 1200px;
-    -ms-perspective: 1200px;
-    perspective: 1200px;
-  }
+
+  
   .swiper-wrapper, .swiper-slide {
   
     -webkit-transform-style: preserve-3d;
@@ -126,7 +126,7 @@
       vertical-align: middle;
   }
   .inner {
-    padding: 20px;
+    padding: 0px;
     font-size: 14px;
     font-weight: 300;
   }
@@ -144,13 +144,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .zoom{
-  
-    height: 100%;
-    width: 100%;
 
-  
-  }
 
   </style>
 		<section id="view-home" class="active">
@@ -160,50 +154,74 @@
 				<button class="left" data-vin="view-qrcode" data-sd="popin">
 					<div style="margin-top:10px;"class="label fa fa-barcode fa-2x"></div>
 				</button>
+				<button style="height:100%;margin-left:27%;margin-right:28%;margin-top:370px;" data-vin="view-tab9" data-sd="popin">
+				
+				<h1 style="width:100%;"><div style="margin-top:10px;" class="label fa fa-expand fa-1x"></div> zoom-mode </h1>
+				</button>
 					<button class="fa fa-arrow-circle-o-right fa-2x right" data-vin="view-tab5" data-sd="sr">
 				</button>
 			</header>
-			
 		
 				<div class="content">
 
-
-    <div class="swiper-container">
+    <div class="swiper-container1">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-      		         <img src="testaga.jpg" alt="" style="
-    height: 45%;
-margin-top: 0px;
-width: 100%;
+      		         <img src="madonna320.jpg" alt="" style="
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
 ">
-<br>
-<hr>
-<h1 class="right">zoom-in  <div class="label fa fa-arrows-alt"  data-vin="view-qrcode" data-sd="popin"></div></h1>
         </div>
         <div class="swiper-slide">
 		         <img src="madonna320.jpg" alt="" style="
-height: 45%;
-margin-top: 0px;
-width: 100%;
- 
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
 ">
-<br>
-<hr>
-<h1 class="right">zoom-in  <div class="label fa fa-arrows-alt"></div></h1>
+
         </div>
         <div class="swiper-slide">
        		         <img src="madonna320.jpg" alt="" style="
-    height: 45%;
-margin-top: 0px;
-width: 100%;
-
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
 ">
-<br>
-<hr>
-<h1 class="right">zoom-in  <div class="label fa fa-arrows-alt"></div></h1>
         </div>
+        <div class="swiper-slide">
+         <img src="madonna320.jpg" alt="" style="
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
+">
+          <div class="caption">Madonna</div>
         </div>
-
+        <div class="swiper-slide">
+        <img src="michael320.jpg" alt="" style="
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
+">
+          <div class="caption">Michael Jackson</div>
+        </div>
+        <div class="swiper-slide">
+                  <img src="madonna320.jpg" alt="" style="
+    height: 55%;
+    width: 65%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 25%;
+">
         </div>
       </div>
     </div>
@@ -212,7 +230,7 @@ width: 100%;
   <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
-    var mySwiper = new Swiper('.swiper-container',{
+    var mySwiper = new Swiper('.swiper-container1',{
       progress:true,
       onProgressChange: function(swiper){
         for (var i = 0; i < swiper.slides.length; i++){
@@ -241,6 +259,8 @@ width: 100%;
   </script>
 				
 				</div>
+		
+       
 		</section>
 
 	
@@ -512,7 +532,8 @@ width: 100%;
 			</header>
 			<!-- Responsive iFrame Calendar-->
 <div class="responsive-iframe-container">
-<iframe src="https://www.google.com/calendar/embed?title=Test%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=480&amp;wkst=1&amp;bgcolor=%23000000&amp;src=mattcw13%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="960" height="480" frameborder="0" scrolling="no"></iframe></div>
+<iframe src="https://www.google.com/calendar/embed?title=Test%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=960&amp;wkst=1&amp;bgcolor=%23000000&amp;src=mattcw13%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+</div>
 		</section>
 		
 		
@@ -662,11 +683,13 @@ width: 100%;
 		
 		
 		
-		<section class="hidden" id="view-fsart">
+		<section class="hidden" id="view-tab9">
 		<header>
 						<section style="height:10%;width:100%;opacity:0.2;background-image:url('http://static.newsland.com/news_images/572/572274.jpg');"></section>
-				<h2>Art</h2>
-				
+				<h2>1 of 3</h2>
+				<button class="right bold" data-vin="view-home" data-sd="popout">
+					<div class="label fa fa-compress fa-1x"></div>
+				</button>
 					
 			</header>
 			
@@ -674,73 +697,47 @@ width: 100%;
 				<div class="content">
 
 
-    <div class="swiper-container7">
+    <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-      		         <img height="100%" width="100%" src="madonna320.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
+      		         <img src="madonna320.jpg" alt="" style="
+    min-height: 460px;
+	max-height:960px;
+    width: 100%;
+ 
 ">
         </div>
         <div class="swiper-slide">
 		         <img src="madonna320.jpg" alt="" style="
     height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
+    width: 100%;
+ 
 ">
 
         </div>
         <div class="swiper-slide">
        		         <img src="madonna320.jpg" alt="" style="
     height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
+    width: 100%;
+   
 ">
         </div>
         <div class="swiper-slide">
          <img src="madonna320.jpg" alt="" style="
     height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
+    width: 100%;
+
 ">
-          <div class="caption">Madonna</div>
+        
         </div>
-        <div class="swiper-slide">
-        <img src="michael320.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-          <div class="caption">Michael Jackson</div>
-        </div>
-        <div class="swiper-slide">
-                  <img src="madonna320.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
+ 
+
       </div>
     </div>
 
-  <script src="js/idangerous.swiper-2.3.min.js"></script>
-  <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
-    var mySwiper = new Swiper('.swiper-container4',{
+    var mySwiper = new Swiper('.swiper-container',{
       progress:true,
       onProgressChange: function(swiper){
         for (var i = 0; i < swiper.slides.length; i++){
