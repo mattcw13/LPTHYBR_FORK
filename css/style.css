@@ -146,6 +146,7 @@ header {
 	        user-select: none;
 	-webkit-touch-callout: none;
 	border-color:black;
+	z-index:200;
 }
 header button {
 	position: absolute;
@@ -645,6 +646,7 @@ em {
 /* Responsive iFrame Calendar */
  
 .responsive-iframe-container {
+
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 80%;
