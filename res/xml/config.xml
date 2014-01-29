@@ -87,7 +87,7 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
     <preference name="splash-screen-duration" value="1000" />
- <preference name="show-splash-screen-spinner" value="true" />
+
     <preference name="load-url-timeout" value="20000" />
         
     <!-- PHONEGAP API FEATURES PREFERENCES -->
