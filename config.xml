@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns = "http://www.w3.org/ns/widgets"
+<?xml version="1.0" encoding="UTF-8"?>
+    <widget xmlns = "http://www.w3.org/ns/widgets" 
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.lanceperlich.test"
-        versionCode="10" 
-        version   = "1.0.0">
-    <name></name>    
-    <preference name="orientation" value="portrait" />        
-</widget>
+                id = "it.venerons.APPLICATION"
+                version = "1.0.0"
+                versionCode = "1">
+
+    <name>APPLICATION NAME</name>
 
     <description>
-       Lance Perlich Tattoos Mobile App - Debug 4
+        APPLICATION DESCRIPTION
     </description>
 
     <author href="http://venerons.github.io" email="veneronslaboratories@gmail.com">Daniele Veneroni</author>
@@ -64,7 +63,7 @@
     <!-- GENERAL PREFERENCES -->
         
     <preference name="phonegap-version" value="3.1.0" />
-    <preference name="orientation" value="portrait" />     
+    <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" /> <!-- remove the upper bar on iOS and Android -->
         
     <!-- iOS PREFERENCES -->
