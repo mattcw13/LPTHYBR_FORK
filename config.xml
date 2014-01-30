@@ -86,7 +86,7 @@
     <preference name="android-targetSdkVersion" value="19" /> <!-- targeting Android 4.4 -->
     <preference name="android-installLocation" value="auto" />
     <preference name="android-windowSoftInputMode" value="stateHidden|adjustResize" /> <!--change to visible to show keyboard on load-->
-    <preference name="splash-screen-duration" value="1000" /> <!--controls hide or show of splash-->
+    <preference name="splash-screen-duration" value="5000" /> <!--controls hide or show of splash-->
     <preference name="load-url-timeout" value="20000" />
         
     <!-- PHONEGAP API FEATURES PREFERENCES -->
