@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>tittle</title>
+		<title>LPtattoos</title>
 		<script>
 		function checkConnection(){ var networkState = navigator.connection.type;   var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -14,11 +14,13 @@
 
     alert('Connection type: ' + states[networkState]);
 }
-  if (networkState == Connection.NONE ){
-   window.location = "./offline.html";
-   else
-   window.location='./main.html';
-   } 
+</script>
+<script>
+if(navigator.network.connection.type == Connection.NONE){
+window.location = "./offline.html";
+}else{
+window.location='./main.html';
+}
 
 			
 		</script>
