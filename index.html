@@ -2,8 +2,23 @@
 <html>
 	<head>
 		<title>LPtattoos</title>
-		<script>
-		function checkConnection(){ var networkState = navigator.connection.type;   var states = {};
+	<body>	
+	<script type="text/javascript" charset="utf-8">
+
+// Wait for PhoneGap to load
+// 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+//
+function onDeviceReady() {
+    checkConnection();
+}
+
+function checkConnection() {
+    var networkState = navigator.network.connection.type;
+
+    var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
     states[Connection.WIFI]     = 'WiFi connection';
@@ -14,16 +29,7 @@
 
     alert('Connection type: ' + states[networkState]);
 }
-</script>
-<script>
-if(navigator.network.connection.type == Connection.NONE){
-window.location = "./offline.html";
-}else{
 window.location='./main.html';
-}
-
-			
-		</script>
-	<body>		
+</script>
 	</body>
 </html>
