@@ -4,7 +4,13 @@
 		<title>LPtattoos</title>
 	<body>	
 	<script>
-	 window.location='./main.html';
+	document.addEventListener("offline", onOffline, false);
+
+function onOffline() {
+    window.location='./main.html';
+}
+	 
 	 </script>
+	 
 	</body>
 </html>
