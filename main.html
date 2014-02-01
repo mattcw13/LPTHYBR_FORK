@@ -17,22 +17,10 @@
     <script src="js/iosLabelFix.js" type="text/javascript"></script>
 	</head>
 	<body class="ios7"> <!-- native | ios7 -->
-<script type="text/javascript" charset="utf-8">
 
-// Wait for PhoneGap to load
-// 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-//
-function onDeviceReady() {
-    checkConnection();
-}
-
-function checkConnection() {
-    var networkState = navigator.network.connection.type;
-
-    var states = {};
+<script>
+function checkConnection(){ var networkState = navigator.connection.type;
+  var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
     states[Connection.WIFI]     = 'WiFi connection';
@@ -42,11 +30,15 @@ function checkConnection() {
     states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
-	   if (networkState == Connection.NONE ){
-
-   } 
 }
 
+</script>
+
+<script>
+ if (networkState == Connection.NONE ){
+   window.location = "www/offline.html";
+   } 
+}
 </script>
 
 <!--jsonly orientation for iphone5
