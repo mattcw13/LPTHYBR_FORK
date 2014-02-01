@@ -17,37 +17,7 @@
     <script src="js/iosLabelFix.js" type="text/javascript"></script>
 	</head>
 	<body class="ios7"> <!-- native | ios7 -->
-<script type="text/javascript" charset="utf-8">
-
-// Wait for PhoneGap to load
-// 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-//
-function onDeviceReady() {
-    checkConnection();
-}
-
-function checkConnection() {
-    var networkState = navigator.network.connection.type;
-
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.NONE]     = 'No network connection';
-
-    alert('Connection type: ' + states[networkState]);
-	   if (networkState == Connection.NONE ){
-   window.location = './www/offline.html';
-   } 
-}
-
-</script>
+	
 
 <!--jsonly orientation for iphone5
 <script>           
@@ -205,7 +175,7 @@ function checkConnection() {
 		<section id="view-home" class="active">
 						<header>
 						<section style="height:10%;width:100%;opacity:0.2;background-image:url('http://static.newsland.com/news_images/572/572274.jpg');"></section>
-				<h2>Portfolio</h2>
+				<h2>offline!!</h2>
 				<button class="left" data-vin="view-qrcode" data-sd="popin">
 					<div style="margin-top:10px;"class="label fa fa-barcode fa-2x"></div>
 				</button>
@@ -845,7 +815,7 @@ function checkConnection() {
 				<div  class="fa fa-map-marker fa-3x"></div>
 				<div class="label">Map</div>
 			</button>
-		<button id="btn2" data-vin="view-tab2"  data-sd="sr">
+		<button  onClick="alert('Some content is not available offline.')" id="btn2" data-vin="view-tab2"  data-sd="sr">
 			<div class="fa fa fa-ellipsis-v fa-3x"></div>
 			<div class="label">More...</div>
 			</button>
