@@ -17,31 +17,7 @@
     <script src="js/iosLabelFix.js" type="text/javascript"></script>
 	</head>
 	<body class="ios7"> <!-- native | ios7 -->
-	<script>
-function checkConnection() {
-    var networkState = navigator.connection.type;
 
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.NONE]     = 'No network connection';
-}
-function InternetOK(){
-        var networkState =navigator.connection.type
-        var states = {};
-        if (state == "NONE" ){
-            if (networkState == Connection.NONE ){
-   window.location = "offline.html";
-   } 
-            }
-        }
-		
-
-</script>
 <!--jsonly orientation for iphone5
 <script>           
   function doOnOrientationChange()
