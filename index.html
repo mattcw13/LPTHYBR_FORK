@@ -2,11 +2,39 @@
 <html>
 	<head>
 		<title>LPtattoos</title>
-		    <script src="js/phonegap-1.0.0" type="text/javascript"></script>
+		    <!--<script src="js/phonegap-1.0.0" type="text/javascript"></script>-->
+ <script type="text/javascript" charset="utf-8" src="js/cordova.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
 
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("online", onOnline, false);
+		document.addEventListener("offline", onOffline, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
+		document.addEventListener("offline", this.onReceivedOffline, false);
+        document.addEventListener("online", this.onReceivedOnline, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+    }
+
+    // Handle the online event
+    //
+    function onOnline() {
+	window.location = "main.html";
+    }
+
+function onOffline()
+{
+    window.location = "offline.html";
+}
+    </script>
 		</head>
-	<body>	
-		<script>
+	<body onload="onLoad()">	
+		<!--old<script>
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -19,8 +47,12 @@ function checkConnection() {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
 }
-  if (networkState == Connection.NONE ){
-   window.location = "offline.html";
+function InternetOK(){
+        var networkState =navigator.connection.type
+        var states = {};
+        if (state == "NONE" ){
+            if (networkState == Connection.NONE ){
+   window.location = "./offline.html";
    } 
             }
         }
@@ -29,7 +61,9 @@ function checkConnection() {
 </script>
 	<script>
 	 window.location='./main.html';
-	 </script>
+	 </script>-->
+	 
+	 
 	 
 	</body>
 </html>
