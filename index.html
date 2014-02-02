@@ -19,11 +19,7 @@ function checkConnection() {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
 }
-function InternetOK(){
-        var networkState =navigator.connection.type
-        var states = {};
-        if (state == "NONE" ){
-            if (networkState == Connection.NONE ){
+  if (networkState == Connection.NONE ){
    window.location = "offline.html";
    } 
             }
