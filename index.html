@@ -3,37 +3,13 @@
 	<head>
 		<title>LPtattoos</title>
 		    <!--<script src="js/phonegap-1.0.0" type="text/javascript"></script>-->
- <script type="text/javascript" charset="utf-8" src="js/cordova.js" type="text/javascript"></script>
-    <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    function onLoad() {
-        document.addEventListener("online", onOnline, false);
-		document.addEventListener("offline", onOffline, false);
-        document.addEventListener("deviceready", onDeviceReady, false);
-		document.addEventListener("offline", this.onReceivedOffline, false);
-        document.addEventListener("online", this.onReceivedOnline, false);
-    }
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-    }
-
-    // Handle the online event
-    //
-    function onOnline() {
-	window.location = "./main.html";
-    }
-
-function onOffline()
-{
-    window.location = "./offline.html";
-}
-    </script>
 		</head>
-	<body onload="onLoad()">	
+	<body>	
+	<img src="http://lanceperlichtattoos.com/mobiledevice.png"
+   onload="window.location='./main.html';"
+   onerror="window.location='./offline.html';"
+>
 		<!--old<script>
 function checkConnection() {
     var networkState = navigator.connection.type;
