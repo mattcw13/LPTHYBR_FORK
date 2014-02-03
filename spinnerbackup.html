@@ -1,0 +1,65 @@
+
+<html>
+	<head>
+		<title>LPtattoos</title>
+		    <!--<script src="js/phonegap-1.0.0" type="text/javascript"></script>-->
+<style>
+.refresh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+</style>
+		</head>
+		
+	<body>	
+	<img src="http://lanceperlichtattoos.com/reconnect.png"
+   onload="window.location='./main.html';"
+   onerror="window.location='./offline.html';"
+>
+<img src="http://lanceperlichtattoos.com/retry1.png"
+   onload="window.location='./main.html';"
+   onerror="window.location='./offline.html';"
+>
+		<!--old<script>
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.NONE]     = 'No network connection';
+}
+function InternetOK(){
+        var networkState =navigator.connection.type
+        var states = {};
+        if (state == "NONE" ){
+            if (networkState == Connection.NONE ){
+   window.location = "./offline.html";
+   } 
+            }
+        }
+		
+
+</script>
+	-->
+	 
+	<!--<script>
+	 window.location='./main.html';
+	 </script>-->
+	 <img class="refresh" src="spinner.gif" alt="" width="120" height="120">
+	</body>
+</html>

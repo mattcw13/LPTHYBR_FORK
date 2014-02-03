@@ -14,9 +14,10 @@
 		  <link href="css/slider.css" rel="stylesheet" type="text/css" />
 		    <link rel="stylesheet" href="css/idangerous.swiper.css">
 		  <link rel="stylesheet" href="css/fonts.css">
+
     <script src="js/iosLabelFix.js" type="text/javascript"></script>
 	</head>
-	<body class="ios7"> <!-- native | ios7 -->
+	<body class="ios7" onload="alert('Continue offline?')"> <!-- native | ios7 -->
 
 <!--jsonly orientation for iphone5
 <script>           
@@ -532,15 +533,36 @@
 		</section>
 		<section class="hidden" id="view-tab3">
 			<header>
-				<h2>Map</h2>
+				<h2>Connecting...</h2>
 			</header>
 		
 			
 				
 				<div class="content">
-                 		<div style="width:100%;height:100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr&output=embed"></iframe><br><table width="425" cellpadding="0" cellspacing="0" border="0"><tr><td align="left"><small><a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr"></tr></table></div>
-
-				
+				<style>
+.refresh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+</style>
+ <img class="refresh" src="spinner.png" alt="" width="120" height="120">
+				<script>
+				redirectTime = "1500";
+redirectURL = "reconnect.html";
+function timedRedirect() {
+	setTimeout("location.href = redirectURL;",redirectTime);
+}
+				</script>
 			</div>
 			
 		</section>
@@ -807,17 +829,14 @@
 			</button>
 			
 			<button id="btn4" data-vin="view-tab4"  data-sd="sr">
-				<div class="fa fa-calendar fa-3x"></div>
-				<div class="label">Calendar</div>
+				<div class="fa fa-user fa-3x"></div>
+				<div class="label">Bio</div>
 			</button>
-			<button id="btn3" data-vin="view-tab3"  data-sd="sr">
-				<div  class="fa fa-map-marker fa-3x"></div>
-				<div class="label">Map</div>
+			<button onClick="timedRedirect();" id="btn3" data-vin="view-tab3"  data-sd="sr">
+				<div  class="fa fa-refresh fa-3x"></div>
+				<div class="label">Reconnect</div>
 			</button>
-		<button id="btn2" data-vin="view-tab2"  data-sd="sr">
-			<div class="fa fa fa-ellipsis-v fa-3x"></div>
-			<div class="label">More...</div>
-			</button>
+	<!--tab2 available onClick="window.location.assign('reconnect.html')" -->
 			
 		</nav>
 	
