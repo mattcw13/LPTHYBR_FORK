@@ -38,6 +38,7 @@ http://rockablethemes.com
 }
 
 .accordion .tab {
+
 	display: block;
 	height: 35px;
 	width:100%;
@@ -74,11 +75,13 @@ background-color:rgba(111, 0, 0, 1);
 }
 
 .accordion div .content {
+
 	display: none;
 	margin: 5px 0;
 }
 
 .accordion div:target .content {
+
 	display: block;
 }
 
@@ -101,13 +104,13 @@ background-color:rgba(111, 0, 0, 1);
 
 .accordion .content h1 {
 	color: white;
-	font: 18px/32px Arial, sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .accordion .content p {
 	margin: 10px 0;
 	color: white;
-	font: 11px/16px Arial, sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .accordion .content span {
