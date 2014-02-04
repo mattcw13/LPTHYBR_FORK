@@ -527,10 +527,11 @@ background-color:transparent;
 }
 
 .content {
+height:100%;
 	line-height: 1em;
 	margin-top: 44px;
 	font-weight: 400;
-	padding-bottom: 114px;
+	padding-bottom: 0px;
 background-color:rgba(0, 0, 0, 0.32);
 min-height: 460px;
 max-height: 960px;
@@ -649,7 +650,7 @@ em {
 
     position: relative;
     padding-bottom: 10%;
-	margin-top:15%;
+	margin-top:0%;
     padding-top: 10%;
     height: 100%;
     overflow: hidden;
