@@ -659,14 +659,14 @@ em {
     margin-bottom:none;
 	margin-top:-18%;
     padding-top: none;
-    height: 110%;
+    height: 100%;
     overflow: hidden;
 }
  
 .responsive-iframe-container iframe,   
 .vresponsive-iframe-container object,  
 .vresponsive-iframe-container embed {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
