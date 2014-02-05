@@ -148,7 +148,6 @@ header {
 	background-size: 100% 1px;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	z-index: 2000;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	        user-select: none;
