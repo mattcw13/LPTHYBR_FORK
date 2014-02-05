@@ -69,7 +69,8 @@ nav {
 	width: 100%;
 	height: 49px;
 	text-align: center;
-	background-color: rgba(111, 0, 0, 1);
+	/* old color ---> background-color: rgba(111, 0, 0, 1); <---*/
+	background-color:rgba(111, 0, 0, 0.25);
 	background-image: linear-gradient(180deg, rgb(200, 199, 204), rgb(200, 199, 204) 50%, transparent 50%);
 	background-size: 100% 1px;
 	background-repeat: no-repeat;
@@ -654,12 +655,11 @@ em {
 /* Responsive iFrame Calendar */
  
 .responsive-iframe-container {
-    z-index:0;
     position: relative;
-    padding-bottom: 10%;
-	margin-top:0%;
-    padding-top: 10%;
-    height: 100%;
+    margin-bottom:none;
+	margin-top:40px;
+    padding-top: none;
+    height: 110%;
     overflow: hidden;
 }
  
@@ -670,5 +670,138 @@ em {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
 }
+.iframeholder
+{
+margin-top: -18%;
+height: 85%;
+width: 100%;
+}
+/* Custom Settings for this project */
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+  }
+  .swiper-container {
+  height:100%;
+  width:100%;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+	}
+	    .swiper-container1 {
+       min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+  }
+    .swiper-container2 {
+       min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+  }
+    .swiper-container3 {
+    min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+      .swiper-container4 {
+    min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+  .swiper-container5 {
+      min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+  .swiper-container6 {
+      min-width:100%;
+    min-height: 100%;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+  
+  .swiper-wrapper, .swiper-slide {
+  
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+  .title {
+    line-height: 480px;
+    text-align: center;
+    font-weight: 100;
+  }
+  .title span {
+      font-size: 60px;
+      line-height: 70px;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .inner {
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .caption {
+    font-size: 50px;
+    font-weight: 100;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}

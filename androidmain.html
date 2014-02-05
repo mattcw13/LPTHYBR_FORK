@@ -12,8 +12,6 @@
 		<script defer src="js/app.js"></script>
 		  <link rel="stylesheet" href="css/accordion.css" type="text/css" media="screen" />
 		    <link rel="stylesheet" href="css/idangerous.swiper.css">
-			  <script src="js/idangerous.swiper-2.3.min.js"></script>
-              <script src="js/idangerous.swiper.progress-1.0.js"></script>
 		  <link rel="stylesheet" href="css/fonts.css">
     <script src="js/iosLabelFix.js" type="text/javascript"></script>
 	</head>
@@ -42,7 +40,136 @@
 </script>-->
 
 
+	 <style>
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+  }
+  .swiper-container {
+  height:100%;
+  width:100%;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
 
+	}
+	    .swiper-container1 {
+       min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+  }
+    .swiper-container2 {
+       min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+
+  }
+    .swiper-container3 {
+    min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+      .swiper-container4 {
+    min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+  .swiper-container5 {
+      min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+  .swiper-container6 {
+      min-width:100%;
+    min-height: 100%;
+	max-width:640px;
+	max-height:960px;
+    background: rgba(0, 0, 0, 0.06);
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+  
+  .swiper-wrapper, .swiper-slide {
+  
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+  .title {
+    line-height: 480px;
+    text-align: center;
+    font-weight: 100;
+  }
+  .title span {
+      font-size: 60px;
+      line-height: 70px;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .inner {
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .caption {
+    font-size: 50px;
+    font-weight: 100;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  </style>
 		<section id="view-home" class="active">
 						<header>
 						<section style="height:10%;width:100%;opacity:0.2;background-image:url('smallskull.png');"></section>
@@ -54,7 +181,7 @@
 				
 				<h1 style="width:100%;"><div style="margin-top:10px;" class="label fa fa-expand fa-1x"></div> zoom-mode </h1>
 				</button>
-					<button class="fa fa-angle-right fa-2x right" data-vin="view-tab5" data-sd="sr">
+					<button class="fa fa-arrow-circle-o-right fa-2x right" data-vin="view-tab5" data-sd="sr">
 					
 				</button>
 				<h1 class="right">swipe left or right<p style="margin:-20px;padding:0px;"><div class="label fa fa-arrows-h"></div></p></h1>
@@ -100,8 +227,7 @@
     margin-left: 20%;
     margin-right: 25%;
 ">
-<br>
-          <div class="caption">Caption</div>
+          <div class="caption">Madonna</div>
         </div>
         <div class="swiper-slide">
         <img src="./img/gallery/set1-5.jpg" alt="" style="
@@ -111,8 +237,7 @@
     margin-left: 20%;
     margin-right: 25%;
 ">
-<br>
-          <div class="caption">Caption</div>
+          <div class="caption">Michael Jackson</div>
         </div>
         <div class="swiper-slide">
                   <img src="./img/gallery/set1-6.jpg" alt="" style="
@@ -126,7 +251,8 @@
       </div>
     </div>
 
-
+  <script src="js/idangerous.swiper-2.3.min.js"></script>
+  <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
     var mySwiper = new Swiper('.swiper-container1',{
@@ -182,8 +308,8 @@
 <section class="hidden" id="view-tab5">
 			<header>
 										<section style="height:10%;width:100%;opacity:0.2;background-image:url('smallskull.png');"></section>
-				<button class="left fa fa-angle-left fa-2x left" data-vin="view-home" data-sd="sl">
-					<button class="right fa fa-angle-right fa-2x right" data-vin="view-tab6" data-sd="sr">
+				<button class="left fa fa-arrow-circle-o-left fa-2x left" data-vin="view-home" data-sd="sl">
+					<button class="right fa fa-arrow-circle-o-right fa-2x right" data-vin="view-tab6" data-sd="sr">
 				</button>
 				<h2>2 of 3</h2>
 			</header>
@@ -255,7 +381,8 @@
       </div>
     </div>
 
-
+  <script src="js/idangerous.swiper-2.3.min.js"></script>
+  <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
     var mySwiper = new Swiper('.swiper-container2',{
@@ -291,24 +418,7 @@
 			
 			</div>
 		</section>
-					<section class="hidden" id="view-tab6">
-		<header>
-												<section style="height:10%;width:100%;opacity:0.2;background-image:url('smallskull.png');"></section>
-				<h2>3 of 3</h2>
-				<button class="fa fa-angle-left fa-2x left" data-vin="view-tab5" data-sd="sl">
-					
-				</button>
-				
-			</header>
-			
-			
-				
-				<div class="content">
-            <h3>3/3 slideshow</h3>
-				</div>
-			
-			
-		</section>
+		
 
 	<section class="hidden" id="view-tab2">
 <header>
@@ -328,7 +438,7 @@
         <!--remove on menu fix<div class="swiper-slide">
 		<h2>Lance Perlich Tattoos</h2><br>
 		<p>on facebook or twitter!</p>
-		<p style="max-width:100%; max-height:100%; margin-left:27%;margin-right:25%;" class="fa fa-facebook-square fa-2x"> <i class="fa fa-twitter-square"></i></p>
+		<p style="max-width:100%; max-height:100%; margin-left:27%;margin-right:25%;" class="fa fa-facebook-square fa-3x"> <i class="fa fa-twitter-square"></i></p>
   		<br>
 <h1 class="right">swipe left for more  <div class="label fa fa-arrow-circle-o-right"></div></h1>
 				
@@ -348,7 +458,7 @@
 		<p>on facebook or twitter!</p>
 		<p style=" margin-left: auto;
     margin-right: auto;
-    width: 10em"><i style="margin-right:2px;" class="fa fa-facebook-square fa-2x"></i><i class="fa fa-twitter-square fa-2x"></i></p>
+    width: 10em"><i style="margin-right:2px;" class="fa fa-facebook-square fa-3x"></i><i class="fa fa-twitter-square fa-3x"></i></p>
 			</div>
 			
 		</div>
@@ -395,6 +505,8 @@
       </div>
     </div>
 
+  <script src="js/idangerous.swiper-2.3.min.js"></script>
+  <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
     var mySwiper = new Swiper('.swiper-container5',{
@@ -442,9 +554,8 @@
 			
 				
 				<div class="content">
-				<div class="iframeholder">
                  		<div style="width:100%;height:110%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr&output=embed"></iframe><br><table width="425" cellpadding="0" cellspacing="0" border="0"><tr><td align="left"><small><a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr"></tr></table></div>
-</div>
+
 				
 			</div>
 			
@@ -460,16 +571,31 @@
 				
 			</header>
 			<!-- Responsive iFrame Calendar-->
-			<div class="iframeholder">
 <div class="responsive-iframe-container">
 
 <iframe src="https://www.google.com/calendar/embed?title=Test%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;wkst=1&amp;bgcolor=%23000000&amp;src=mattcw13%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
 </div>
-</div>
 		</section>
 		
 		
-
+			<section class="hidden" id="view-tab6">
+		<header>
+												<section style="height:10%;width:100%;opacity:0.2;background-image:url('smallskull.png');"></section>
+				<h2>3 of 3</h2>
+				<button class="fa fa-arrow-circle-o-left fa-2x left" data-vin="view-tab5" data-sd="sl">
+					
+				</button>
+				
+			</header>
+			
+			
+				
+				<div class="content">
+            <h3>3/3 slideshow</h3>
+				</div>
+			
+			
+		</section>
 			<section class="hidden" id="view-tab7">
 		<header>
 						<section style="height:10%;width:100%;opacity:0.2;background-image:url('smallskull.png');"></section>
@@ -485,7 +611,7 @@
     <div class="swiper-container4">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-      		         <img src="./img/gallery/art1.jpg" alt="" style="
+      		         <img src="madonna320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
@@ -494,7 +620,7 @@
 ">
         </div>
         <div class="swiper-slide">
-		         <img src="./img/gallery/art1.jpg" alt="" style="
+		         <img src="madonna320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
@@ -504,7 +630,7 @@
 
         </div>
         <div class="swiper-slide">
-       		         <img src="./img/gallery/art1.jpg" alt="" style="
+       		         <img src="madonna320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
@@ -513,29 +639,27 @@
 ">
         </div>
         <div class="swiper-slide">
-         <img src="./img/gallery/art1.jpg" alt="" style="
+         <img src="madonna320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
     margin-left: 20%;
     margin-right: 25%;
 ">
-<br>
-          <div class="caption">Caption Here</div>
+          <div class="caption">Madonna</div>
         </div>
         <div class="swiper-slide">
-        <img src="./img/gallery/art1.jpg" alt="" style="
+        <img src="michael320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
     margin-left: 20%;
     margin-right: 25%;
 ">
-<br>
-          <div class="caption">Caption visible on large screen</div>
+          <div class="caption">Michael Jackson</div>
         </div>
         <div class="swiper-slide">
-                  <img src="./img/gallery/art1.jpg" alt="" style="
+                  <img src="madonna320.jpg" alt="" style="
     height: 55%;
     width: 65%;
     margin-top: 20%;
@@ -546,7 +670,8 @@
       </div>
     </div>
 
-
+  <script src="js/idangerous.swiper-2.3.min.js"></script>
+  <script src="js/idangerous.swiper.progress-1.0.js"></script>
 
   <script>
     var mySwiper = new Swiper('.swiper-container4',{
@@ -691,26 +816,26 @@
 		
 		<nav>
 				<button id="btn1" class="active" data-vin="view-home"  data-sd="sr">
-				<div class="fa fa-anchor fa-2x"></div>
+				<div class="fa fa-anchor fa-3x"></div>
 				<!--<div class="btn-icon" style="-webkit-mask-image: url(skull.svg);"></div>-->
 				<div class="label">Portfolio</div>
 			</button>
 			
 				<button id="btn5" data-vin="view-tab7" data-sd="sr">
-				<div class="fa fa-pencil fa-2x"></div>
+				<div class="fa fa-pencil fa-3x"></div>
             	<div class="label">Art</div>
 			</button>
 			
 			<button id="btn4" data-vin="view-tab4"  data-sd="sr">
-				<div class="fa fa-calendar fa-2x"></div>
+				<div class="fa fa-calendar fa-3x"></div>
 				<div class="label">Calendar</div>
 			</button>
 			<button id="btn3" data-vin="view-tab3"  data-sd="sr">
-				<div  class="fa fa-map-marker fa-2x"></div>
+				<div  class="fa fa-map-marker fa-3x"></div>
 				<div class="label">Map</div>
 			</button>
 		<button id="btn2" data-vin="view-tab2"  data-sd="sr">
-			<div class="fa fa fa-ellipsis-v fa-2x"></div>
+			<div class="fa fa fa-ellipsis-v fa-3x"></div>
 			<div class="label">More...</div>
 			</button>
 			
