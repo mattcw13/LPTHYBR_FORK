@@ -138,7 +138,7 @@ background-position:center;
 }
 
 header {
-	position: fixed;
+	position: absolute;
 	top:0;
 	height: 44px;
 	line-height: 44px;
@@ -675,10 +675,14 @@ em {
 }
 .iframeholder
 {
-margin-top:12%;
-height: 95%;
+       min-width: 320px;
+    min-height: 480px;
+	max-width:640px;
+	max-height:960px;
+margin-top:0;
+height: 100%;
 width: 100%;
-z-index:1;
+z-index:0;
 }
 .navbgimg{
 background-image:url('smokebg.jpg');
