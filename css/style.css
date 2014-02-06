@@ -154,7 +154,7 @@ header {
 	        user-select: none;
 	-webkit-touch-callout: none;
 	border-color:black;
-	z-index:200;
+	z-index:2;
 }
 header button {
 	position: absolute;
@@ -545,8 +545,9 @@ min-height: 460px;
 max-height: 960px;
 min-width: 320px;
 max-width: 640px;
+z-index:1;
 }
-}
+
 input, textarea {
 	display: block;
 	position: relative;
