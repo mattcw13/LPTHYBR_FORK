@@ -75,7 +75,7 @@ nav {
 	background-size: 100% 1px;
 	background-repeat: no-repeat;
 	background-position: top center;
-	z-index: 100;
+	z-index: 1;
 	color:white;
 }
 
@@ -678,6 +678,7 @@ em {
 margin-top:12%;
 height: 95%;
 width: 100%;
+z-index:1;
 }
 .navbgimg{
 background-image:url('smokebg.jpg');
