@@ -138,7 +138,7 @@ background-position:center;
 }
 
 header {
-	position: absolute;
+	position: fixed;
 	top:0;
 	height: 44px;
 	line-height: 44px;
