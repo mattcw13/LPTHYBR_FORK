@@ -675,6 +675,7 @@ em {
 }
 .iframeholder
 {
+position:fixed;
        min-width: 320px;
     min-height: 480px;
 	max-width:640px;
