@@ -1,4 +1,4 @@
-var $ = function (query) { return document.querySelector(query); };
+var $$$ = function (query) { return document.querySelector(query); };
 var $$ = function (query) { return document.querySelectorAll(query); };
 
 var slideOpts = {
@@ -15,10 +15,10 @@ var clearNode = function (node) {
 };
 
 var SwitchTabs = function () {
-    var vIn = $('#'+this.dataset.vin),
-        vOut = $('section.active'),
+    var vIn = $$$('#'+this.dataset.vin),
+        vOut = $$$('section.active'),
         vInCmd = this,
-        vOutCmd = $('nav button.active');
+        vOutCmd = $$$('nav button.active');
     vOut.classList.remove('active');
     vIn.classList.add('active');
     vIn.classList.remove('hidden');
@@ -28,8 +28,8 @@ var SwitchTabs = function () {
 }
 
 var Slide = function (callback) {
-    var vIn = $('#'+this.dataset.vin),
-        vOut = $('section.active'),
+    var vIn = $$$('#'+this.dataset.vin),
+        vOut = $$$('section.active'),
         slideType = this.dataset.sd,
         onAnimationEnd = function () {
             vOut.classList.add('hidden');
