@@ -116,7 +116,7 @@ var App = {
         for (var i = 0; i<tabbtns.length; i++) tabbtns[i].addEventListener('click', SwitchTabs, false);
 
         var navbtns = $$('header button');
-        for (var i = 0; i<navbtns.length; i++) navbtns[i].addEventListener('click', Slide, false);
+        for (var i = 0; i<navbtns.length; i++) navbtns[i].addEventListener('click', Slide, true);
                 
         var listitems = $$('#view-home li');
         for (var i = 0; i<listitems.length; i++) listitems[i].addEventListener('click', Slide, false);
