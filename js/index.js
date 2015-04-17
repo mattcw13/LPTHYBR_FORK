@@ -14,6 +14,7 @@ angular.module('ionicApp', ['ionic'])
         'home-tab': {
           templateUrl: "templates/home.html",
           controller: 'HomeTabCtrl'
+		  
         }
       }
     })
@@ -122,8 +123,8 @@ angular.module('ionicApp', ['ionic'])
    // QR-Code Dialog // 
    $scope.showConfirm = function() {
      var alertPopup = $ionicPopup.alert({
-       title: 'Artist Bio',
-       template: '<div><h1 class="center icon ion-ios7-compose"></h1><h1 class="icon ion-ios7-keypad"></h1></div>'
+       title: 'QR-Discount',
+       template: '<div><img style="height:auto;width:100%;" id="qrcode" class="qr-resp" src="./local_media/images/qr.png"></img></div>'
      });
    
    }
@@ -135,7 +136,7 @@ angular.module('ionicApp', ['ionic'])
        template: '<span class="center"><div class="circular"></div></span><h4 class="center title" style="color:white;" >Artist/Guerilla</h4><span class="center title">"not my job,but my life."</span>'
      });
      alertPopup.then(function(res) {
-       console.log('Thank you for not eating my delicious ice cream cone');
+       console.log('logged_okay');
      });
    };
 })
