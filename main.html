@@ -1,27 +1,89 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="apple-mobile-web-app-title" content="Lance Perlich Tattoos">
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-title" content="Lance Perlich Tattoos">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<title>Lance Perlich Tattoos</title>
-		<link href='fonts/raleway.css' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-			<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
-	<script src="jquery.zoom.min.js"></script>
-		<script defer src="js/fastclick.js"></script>
-		<script defer src="js/app.js"></script>
-		  <link rel="stylesheet" href="css/accordion.css" type="text/css" media="screen" />
-		    <link rel="stylesheet" href="css/idangerous.swiper.css">
-			  <script src="js/idangerous.swiper-2.3.min.js"></script>
-             <!--3donly <script src="js/idangerous.swiper.progress-1.0.js"></script>-->
-		  <link rel="stylesheet" href="css/fonts.css">
-    <script src="js/iosLabelFix.js" type="text/javascript"></script>
+  <title>Lance Perlich Hybrid</title>
+  <link href='fonts/raleway.css' rel='stylesheet' type='text/css'>
+      <link href="./css/ionic.min.css" rel="stylesheet">
+    <!-- google maps javascript -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+<!--remember to localize all .css and .js before compiling in build-->
+    <link href="./css/ionic.min.css" rel="stylesheet">
+	    <link href="./css/fontawesome.min.css" rel="stylesheet">
+    <script src="./js/ionic.bundle.min.js"></script>
+	
+<style>
+.pane {
+background-image:url('smoke.jpg');
+ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#000000, endColorstr=#424242);
+ background-image:-moz-linear-gradient(top, #000000 0%, #424242 31%,#2a2b2b 100%);
+background-image:linear-gradient(top, #000000 0%, #424242 31%,#2a2b2b 100%);
+background-image:-webkit-linear-gradient(top, #000000 0%, #424242 31%,#2a2b2b 100%);
+background-image:-o-linear-gradient(top, #000000 0%, #424242 31%,#2a2b2b 100%);
+background-image:-ms-linear-gradient(top, #000000 0%, #424242 31%,#2a2b2b 100%);
+ background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#000000), color-stop(31%,#424242),color-stop(100%,#2a2b2b));}
+
+font-family: 'Raleway', sans-serif;
+}
+.slider {
+  height: 100%;
+}
+.slider-pager {
+display:none;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+background-color: transparent;
+  text-align: center;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+.title {
+font-family: 'Raleway', sans-serif;
+}
+
+.center{
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+</style>
 	<style>
+	
 		/* styles unrelated to zoom */
 		* { border:0; margin:0; padding:0; }
-		p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
+		
 
 		/* these styles are for the demo, but are not required for the plugin */
 		.zoom {
@@ -47,670 +109,594 @@
 
 		.zoom img::selection { background-color: transparent; }
 
-		#ex2 img:hover { cursor: url(grab.cur), default; }
-		#ex2 img:active { cursor: url(grabbed.cur), default; }
+	.circular {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(./local_media/images/bio.jpg) no-repeat;
+	}
+		.item {
+border-color: #000;
+background-color: #525252;
+color: #fff;
+
+}
+	.card {
+	color: white;
+	background-color:black;
+	}
+	.activated {
+	background-color:black;
+	}
+	.popup-container.active .popup {
+	background-color:rgb(73, 73, 73);
+	
+	}
+	
+	.popup-head {
+padding: 15px 0px;
+border-bottom: 0px solid #eee;
+text-align: center;
+color: white;
+}
+.popup-container.active .popup {
+color:white;
+}
+.whiteout {
+color:white;
+}
 	</style>
 
-	<script>
+  </head>
+
+  <body style="font-family: 'Raleway', sans-serif;">
+
+    <!---<ion-nav-bar class="nav-title-slide-ios7 bar-positive bar-dark">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+	  
+      </ion-nav-back-button>
+	  
+	  
+    </ion-nav-bar>--->
+
+    <ion-nav-view animation="slide-right-left"></ion-nav-view>
+
+    <script id="templates/tabs.html" type="text/ng-template">
+      <ion-tabs class="tabs-icon-top tabs-positive tabs-dark" >
+
+        <ion-tab title="Portfolio" icon="ion-ios7-albums" href="#/tab/home" class="title">
+          <ion-nav-view name="home-tab"></ion-nav-view>
+		  
+        </ion-tab>
+
+        <ion-tab title="Map" icon="ion-ios7-location" href="#/tab/about" class="title" >
+          <ion-nav-view name="about-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Bookings" icon="ion-ios7-clock" ui-sref="tabs.contact" class="title">
+          <ion-nav-view name="contact-tab"></ion-nav-view>
+        </ion-tab>
+      <ion-tab title="More" icon="ion-ios7-more" href="#/tab/map" class="title">
+          <ion-nav-view name="map-tab"></ion-nav-view>
+        </ion-tab>
 	
-		$(document).ready(function(){
-			$('#ex1').zoom();
-			$('#ex2').zoom({ on:'grab' });
-			$('#ex3').zoom({ on:'click' });			 
-			$('#ex4').zoom({ on:'toggle' });
-		});
-	</script>
-	</head>
-	<body class="ios7"> <!-- native | ios7 -->
+      </ion-tabs>
+    </script>
 
-<!--jsonly orientation for iphone5
-<script>           
-  function doOnOrientationChange()
-  {
-    switch(window.orientation) 
-    {  
-      case -90:
-      case 90:
-        alert('landscape');
-        break; 
-      default:
-        alert('portrait');
-        break; 
-    }
-  }
+    <script id="templates/home.html" type="text/ng-template" >
 
-  window.addEventListener('orientationchange', doOnOrientationChange);
-
-  // Initial execution if needed
-  doOnOrientationChange();
-</script>-->
-
-
-
-		<section id="view-home" class="active">
-						<header data-tap-toggle="false">
-						<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-				<h2>Portfolio</h2>
-				<button class="left" data-vin="view-qrcode" data-sd="popin">
-					<div style="margin-top:10px;"class="label fa fa-qrcode fa-2x"></div>
-				</button>
-				<button style="height:100%;margin-left:27%;margin-right:28%;margin-top:370px;" data-vin="view-tab9" data-sd="popin">
-				
-				<h1 style="width:100%;"><div style="margin-top:10px;" class="label fa fa-expand fa-1x"></div> zoom-mode </h1>
-				</button>
-					<button class="fa fa-angle-right fa-2x right" data-vin="view-tab5" data-sd="sr">
-					
-				</button>
-			</header>
-		
-				<div class="">
-
-    <div class="swiper-container1">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-	
-<div name="zoom-margins" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 15%;
-    margin-right: 25%;
-">
-	<span class='zoom' id='ex2' onclick="$(this).zoom({on:'grab'});">
-		<img src="http://scontent-b.xx.fbcdn.net/hphotos-frc3/t1/s720x720/549959_592777600739233_1904713741_n.jpg" width='240' height='260' alt='Roxy on the Ohoopee'/>
-
-	</span>
-</div>
-        </div>
-        <div class="swiper-slide">
-	
-<div name="zoom-margins" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 15%;
-    margin-right: 25%;
-">
-	<span class='zoom' id='ex2' onclick="$(this).zoom({on:'grab'});">
-		<img src="./img/gallery/set1-6.jpg" width='240' height='260' alt='Roxy on the Ohoopee'/>
-
-	</span>
-</div>
-        </div>
-          <div class="swiper-slide">
-	
-<div name="zoom-margins" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 15%;
-    margin-right: 25%;
-">
-	<span class='zoom' id='ex2' onclick="$(this).zoom({on:'grab'});">
-		<img src="http://scontent-b.xx.fbcdn.net/hphotos-frc3/t1/s720x720/549959_592777600739233_1904713741_n.jpg" width='240' height='260' alt='Roxy on the Ohoopee'/>
-
-	</span>
-</div>
-        </div>
-          <div class="swiper-slide">
-	
-<div name="zoom-margins" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 15%;
-    margin-right: 25%;
-">
-	<span class='zoom' id='ex2' onclick="$(this).zoom({on:'grab'});">
-		<img src="http://scontent-b.xx.fbcdn.net/hphotos-frc3/t1/s720x720/549959_592777600739233_1904713741_n.jpg" width='240' height='260' alt='Roxy on the Ohoopee'/>
-
-	</span>
-</div>
-        </div>
-        <div class="swiper-slide">
-        <img src="./img/gallery/set1-5.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-<br>
-          <div class="caption">Caption</div>
-        </div>
-        <div class="swiper-slide">
-                  <img src="./img/gallery/set1-6.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-      </div>
-    </div>
-
-
-
-  <script>
-    var mySwiper = new Swiper('.swiper-container1',{
-      progress:true,
-      onProgressChange: function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          var slide = swiper.slides[i];
-          var progress = slide.progress;
-          var rotate = -90*progress;
-          if (rotate<-90) rotate=-90;
-          if (rotate>90) rotate=90;
-          var translate = progress*swiper.width/2;  
-          var opacity = 1 - Math.min(Math.abs(progress),1);
-          slide.style.opacity = opacity;
-          swiper.setTransform(slide,'rotateY('+rotate+'deg) translate3d('+translate+'px,0,0)');
-        }
-      },
-      onTouchStart:function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], 0);
-        }
-      },
-      onSetWrapperTransition: function(swiper) {
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], swiper.params.speed);
-        }
-      }
-    })
-  </script>
-				
-				</div>
-		
-       
-		</section>
-
-	
-		<section class="hidden" id="view-qrcode">
-			<header data-tap-toggle="false">
-				<h2>QR-Code Discount</h2>
-				<button class="right bold" data-vin="view-home" data-sd="popout">
-					<div class="label fa fa-times-circle fa-1x"></div>
-				</button>
-			</header>
-			
-				<div class="">
-                   	
-<img class="hidden" style="height:80%;width:100%;margin-top:20px:" src="http://gg.gg/qrgen" onerror="window.location='./offline.html';"
-   onerror="window.location='./offline.html';">					
-				</div>
-		
-			</div>
-		</section>
-	
-<section class="hidden" id="view-tab5">
-			<header data-tap-toggle="false">
-										<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-				<button class="left fa fa-angle-left fa-2x left" data-vin="view-home" data-sd="sl">
-					<button class="right fa fa-angle-right fa-2x right" data-vin="view-tab6" data-sd="sr">
-					<button style="height:100%;margin-left:27%;margin-right:28%;margin-top:370px;" data-vin="view-tab9" data-sd="popin">
-				
-				<h1 style="width:100%;"><div style="margin-top:10px;" class="label fa fa-expand fa-1x"></div> zoom-mode </h1>
-				</button>
-				</button>
-				<h2>2 of 3</h2>
-			</header>
-		
-			<div class="scrollWrap">
-				
-				<div class="">
-              
-
-    <div class="swiper-container2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-      		         <img src="./img/gallery/set2-1.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-        <div class="swiper-slide">
-		         <img src="./img/gallery/set2-2.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-
-        </div>
-        <div class="swiper-slide">
-       		         <img src="./img/gallery/set2-3.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-        <div class="swiper-slide">
-         <img src="./img/gallery/set2-4.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-          <div class="caption">label here!</div>
-        </div>
-        <div class="swiper-slide">
-        <img src="./img/gallery/set2-5.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-          <div class="caption">label here</div>
-        </div>
-        <div class="swiper-slide">
-                  <img src="./img/gallery/set2-6.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-      </div>
-    </div>
-
-
-
-  <script>
-    var mySwiper = new Swiper('.swiper-container2',{
-      progress:true,
-      onProgressChange: function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          var slide = swiper.slides[i];
-          var progress = slide.progress;
-          var rotate = -90*progress;
-          if (rotate<-90) rotate=-90;
-          if (rotate>90) rotate=90;
-          var translate = progress*swiper.width/2;  
-          var opacity = 1 - Math.min(Math.abs(progress),1);
-          slide.style.opacity = opacity;
-          swiper.setTransform(slide,'rotateY('+rotate+'deg) translate3d('+translate+'px,0,0)');
-        }
-      },
-      onTouchStart:function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], 0);
-        }
-      },
-      onSetWrapperTransition: function(swiper) {
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], swiper.params.speed);
-        }
-      }
-    })
-  </script>
-				
-			   
-				</div>
-			
-			</div>
-		</section>
-					<section class="hidden" id="view-tab6">
-		<header  data-tap-toggle="false">
-												<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-														<button class="right bold" data-vin="view-home" data-sd="sl">
-					<div style="margin-top:6px;" class="label fa fa-angle-double-left fa-2x"></div>
-				</button>
-				<h2>3 of 3</h2>
-				<button class="fa fa-angle-left fa-2x left" data-vin="view-tab5" data-sd="sl">
-					
-				</button>
-				
-			</header>
-			
-			
-				
-				<div class="">
-            <h3>3/3 slideshow</h3>
-				</div>
-			
-			
-		</section>
-
-	
-		<section class="hidden" id="view-tab3">
-			<header  data-tap-toggle="false">
-
-				<h2>Map</h2>
-					<button class="right bold">
-					<a style="color:white;" href="geo:41.0899317,-85.1456957"><div class="label fa fa-location-arrow fa-1x"></div></a>
-				</button>
-			</header>
-		
-													<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-				
-				<div class="content">
-
-                 		<div style="width:100%;height:100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr&iwloc=near&output=embed"></iframe><br><table width="425" cellpadding="0" cellspacing="0" border="0"><tr><td align="left"><small><a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1645%2BN%2BWells%2BSt%2C%2BFort%2BWayne%2C%2BIN%2B46808(Blood+Money+Tattoo+Studio)&ie=UTF8&z=12&t=m&iwloc=addr"></tr></table></div>
-
-				
-			</div>
-			
-		</section>
-		
-		
-		
-				<section class="hidden" id="view-tab4">
-			<header  data-tap-toggle="false">
-													<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-
-				<h2>Bookings</h2>
-				<button class="right bold">
-					<a style="color:white;" href="tel:+1-800-555-1234"><div class="label fa fa-phone fa-1x"></div></a>
-				</button>
-			</header>
-			<!-- Responsive iFrame Calendar-->
-			<div class="iframeholder">
-
-
-<iframe src="https://www.google.com/calendar/embed?title=Test%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;wkst=1&amp;bgcolor=%23000000&amp;src=mattcw13%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-
-
-</div>
-		</section>
-		
-		
-
-			<section class="hidden" id="view-tab7">
-		<header  data-tap-toggle="false">
-						<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-				<h2>Art</h2>
-				
-					
-			</header>
-			
-		
-				<div class=""><style>
-.refresh {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    margin:-60px 0 0 -60px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-</style>
- <img class="refresh" src="spinner.png" alt="" width="120" height="120">
-				<script>
-				redirectTime = "1500";
-redirectURL = "reconnect.html";
-function timedRedirect() {
-	setTimeout("location.href = redirectURL;",redirectTime);
-}
-				</script>
-
-    <div class="swiper-container4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-      		         <img src="./img/gallery/art1.jpg" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-        <div class="swiper-slide">
-		         <img src="./img/gallery/comingsoon.png" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-
-        </div>
-        <div class="swiper-slide">
-       		         <img src="./img/gallery/comingsoon.png" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-        <div class="swiper-slide">
-         <img src="./img/gallery/comingsoon.png" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-<br>
-<br>
-          <div class="caption">Caption Here</div>
-        </div>
-        <div class="swiper-slide">
-        <img src="./img/gallery/comingsoon.png" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-<br>
-<br>
-          <div class="caption">Caption</div>
-        </div>
-        <div class="swiper-slide">
-                  <img src="./img/gallery/comingsoon.png" alt="" style="
-    height: 55%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 20%;
-    margin-right: 25%;
-">
-        </div>
-      </div>
-    </div>
-
-
-
-  <script>
-    var mySwiper = new Swiper('.swiper-container4',{
-      progress:true,
-      onProgressChange: function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          var slide = swiper.slides[i];
-          var progress = slide.progress;
-          var rotate = -90*progress;
-          if (rotate<-90) rotate=-90;
-          if (rotate>90) rotate=90;
-          var translate = progress*swiper.width/2;  
-          var opacity = 1 - Math.min(Math.abs(progress),1);
-          slide.style.opacity = opacity;
-          swiper.setTransform(slide,'rotateY('+rotate+'deg) translate3d('+translate+'px,0,0)');
-        }
-      },
-      onTouchStart:function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], 0);
-        }
-      },
-      onSetWrapperTransition: function(swiper) {
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], swiper.params.speed);
-        }
-      }
-    })
-  </script>
-				
-				</div>
-		</section>
-				<section class="hidden" id="view-tab8">
-		<header  data-tap-toggle="false">
-				<h2>about this app</h2>
-				
-			<button class="right bold" data-vin="view-tab2" data-sd="popout">
-					<div class="label fa fa-times-circle fa-1x"></div>
-				</button>
-				
-			</header>
-			
-			
-				
-				<div class="">
-            <h3>Developer Info Here:</h3>
-			<p>info|info|info|info|info|info</p><p>info|info|info|info|info|info</p><p>info|info|info|info|info|info</p><p>info|info|info|info|info|info</p>
-				</div>
-			
-			
-		</section>
-		
-		
-		
-		
-		<section class="hidden" id="view-tab9">
-		<header>
-						<section style="height:10%;width:100%;opacity:0.2;background-image:url('');"></section>
-				<h2>1 of 3</h2>
-				<button class="right bold" data-vin="view-home" data-sd="popout">
-					<div class="label fa fa-compress fa-1x"></div>
-				</button>
-					
-			</header>
-			
-		
-				<div class="">
-
-
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-      		         <img src="./img/gallery/set1-1.jpg" alt="" style="
-    min-height: 460px;
-	max-height:960px;
-    width: 100%;
- 
-">
-        </div>
-        <div class="swiper-slide">
-		         <img src="./img/gallery/set1-2.jpg" alt="" style="
-    height: 100%;
-    width: 100%;
- 
-">
-
-        </div>
-        <div class="swiper-slide">
-       		         <img src="./img/gallery/set1-3.jpg" alt="" style="
-    height: 100%;
-    width: 100%;
-   
-">
-        </div>
-        <div class="swiper-slide">
-         <img src="./img/gallery/set1-4.jpg" alt="" style="
-    height: 100%;
-    width: 100%;
-
-">
+  <div class="bar bar-dark bar-positive bar-header">
+  <!--<button class="button" ><a href="http://facebook.com/lanceperlichtattoos" style="color:white;text-decoration:none;" target=_blank">Facebook</a></button>-->
+  <div class="h1 title">Portfolio</div>
+  
+  <!--<a class="button button-icon ion-ios7-arrow-forward" href="#/tab/facts"></a>-->
         
-        </div>
+</div>
+
+      <ion-view title="Portfolio">
+
+        <ion-content class="padding" scroll="false">
+		<div name="container" class="center" style="margin-top:4.5rem;  background-image: url('lptextlogo.png');background-repeat: no-repeat;background-size: contain;background-position-x: 50%;"><img src="lptextlogo.png" style="z-index:99;margin-left:50%;margin-right:50%;" height="100px" width="400px;"></img></div>
+          <ion-slide-box active-slide="myActiveSlide" style="margin-top:-5rem;" >
+		  
+  <ion-slide >
+
+  
+    <div class="box">
+	<span class='zoom' id='ex1' style="margin-top:0px;">
+		<img src='./local_media/images/3.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>
+	   <p class="title">
+            Swipe left or right
+          </p>
+	</div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex2' style="margin-top:auto">
+		<img src='./local_media/images/4.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex3' style="margin-top:auto">
+		<img src='./local_media/images/5.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex4' style="margin-top:auto">
+		<img src='./local_media/images/4.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex5' style="margin-top:auto">
+		<img src='./local_media/images/5.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex6' style="margin-top:auto">
+		<img src='./local_media/images/6.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex7' style="margin-top:auto">
+		<img src='./local_media/images/7.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex8' style="margin-top:auto">
+		<img src='./local_media/images/8.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex9' style="margin-top:auto">
+		<img src='./local_media/images/9.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  <p class="title">
+            Swipe left or right
+          </p></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex10' style="margin-top:auto">
+		<img src='./local_media/images/10.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>  
+         <p class="title">
+            Swipe left or right 
+          </p> 
+          
+	</div>
+
+	
+  </ion-slide>
+ <ion-slide>
+    <div class="box">
+	<span class='zoom' id='ex11' style="margin-top:auto">
+		<img src='./local_media/images/11.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>
+	
+	<br>
+		<br>
+			<br>
+				<br>
+	
+	
+	</div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex12' style="margin-top:auto">
+		<img src='./local_media/images/12.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex13' style="margin-top:auto">
+		<img src='./local_media/images/13.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex14' style="margin-top:auto">
+		<img src='./local_media/images/14.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex15' style="margin-top:auto">
+		<img src='./local_media/images/15.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex16' style="margin-top:auto">
+		<img src='./local_media/images/16.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex17' style="margin-top:auto">
+		<img src='./local_media/images/17.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex18' style="margin-top:auto">
+		<img src='./local_media/images/18.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex19' style="margin-top:auto">
+		<img src='./local_media/images/19.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex20' style="margin-top:auto">
+		<img src='./local_media/images/20.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex21' style="margin-top:auto">
+		<img src='./local_media/images/21.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex22' style="margin-top:auto">
+		<img src='./local_media/images/22.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex23' style="margin-top:auto">
+		<img src='./local_media/images/23.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box">
+	<span class='zoom' id='ex24' style="margin-top:auto">
+		<img src='./local_media/images/24.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>
+	
+	<br>
+		<br>
+		
+	
+	
+	</div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex25' style="margin-top:auto">
+		<img src='./local_media/images/25.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex26' style="margin-top:auto">
+		<img src='./local_media/images/26.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box"><span class='zoom' id='ex27' style="margin-top:auto">
+		<img src='./local_media/images/27.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex28' style="margin-top:auto">
+		<img src='./local_media/images/28.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex29' style="margin-top:auto">
+		<img src='./local_media/images/29.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex30' style="margin-top:auto">
+		<img src='./local_media/images/30.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex31' style="margin-top:auto">
+		<img src='./local_media/images/31.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex32' style="margin-top:auto">
+		<img src='./local_media/images/32.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span></div>
+  </ion-slide>
+   <ion-slide>
+    <div class="box"><span class='zoom' id='ex33' style="margin-top:auto">
+		<img src='./local_media/images/33.jpg' width='290' height='320' alt='Roxy on the Ohoopee'/>
+	</span>></div>
+  </ion-slide>
+</ion-slide-box>
+        
+        </ion-content>
+		<ion-footer-bar class="bar-dark">
+       <h1 class="title"><h2 class="icon ion-ios7-search-strong title" onclick="location.reload(true)"> Tap to Enable Zoom </h2>
+    </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/facts.html" type="text/ng-template">
+      <div class="bar bar-dark bar-positive bar-header">
+<a class="button button-icon ion-ios7-arrow-back" href="#/tab/facts1"></a>
+  <div class="h1 title">2 of 3</div>
+  <a class="button button-icon ion-ios7-arrow-forward" href="#/tab/facts2"></a>
+        </button>
+</div>
+	  <ion-view title="2 of 3">
+	  		<div name="container" class="center" style="margin-top:4.8rem;"><img src="lptextlogo.png" style="z-index:99;margin-left:50%;margin-right:50%;" height="100px" width="400px;"></img></div>
+
+        <ion-content class="padding" style="margin-top:5.5em">
+          <ion-slide-box active-slide="myActiveSlide">
  
+  </ion-slide-box>
+            
+          </p>
+        </ion-content>
+		<ion-footer-bar class="bar-dark">
+       <h1 class="title"><h2 class="icon ion-ios7-search-strong title" onclick="location.reload(true)"> Tap to Enable Zoom </h2>
+    </ion-footer-bar>
+      </ion-view>
+    </script>
 
-      </div>
-    </div>
+    <script id="templates/facts2.html" type="text/ng-template">
+	     <div class="bar bar-dark bar-positive bar-header">
+  
+  <a class="button button-icon ion-ios7-arrow-back" href="#/tab/facts"></a>
+  <a class="h1 title" onclick="location.reload(true)">3 of 3</a>
+  <a class="button button-icon ion-ios7-loop-strong" href="#/tab/home"></a>
+        </button>
+</div>
+      <ion-view title="3 of 3">
+	  
+        <ion-content class="padding">
+              <ion-slide-box active-slide="myActiveSlide">
+  
+
+  </ion-slide-box>
+  
+           
+           
+          </p>
+        </ion-content>
+		<ion-footer-bar class="bar-dark">
+       <h1 class="title"><h2 class="icon ion-ios7-search-strong title" onclick="location.reload(true)"> Tap to Enable Zoom </h2>
+    </ion-footer-bar>
+      </ion-view>
+    </script>
+
+    <script id="templates/about.html" type="text/ng-template" >
+	<style>#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}</style>
+	
+
+    <ion-view ng-controller="MapCtrl" >
+    <div class="bar bar-dark bar-positive bar-header" ng-controller="PopoverStyleCtrl">
+  <button class="button button-icon icon ion-refresh-outline"></button>
+  <div class="h1 title">Map</div>
+  <button class="button button-icon ion-ios7-cog" ng-click="popover.show($event)">
+        </button>
+</div>
+    <ion-content>
+      <div id="map" data-tap-disabled="true"><iframe style="margin-top:-70px;height:117%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.0406709002605!2d-85.14583800000004!3d41.089958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8815e487b7d3c8c1%3A0x3026f2840bc21080!2sBloodmoney!5e0!3m2!1sen!2sus!4v1412923522890" width="100%" height="100%" frameborder="0" style="border:0"></iframe></div>
+    </ion-content>
+    
+  </ion-view>
+        
+    </script>
+ <style>.popover { height:210px; width: 200px; }</style>
+ 
+ <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list" style="color:white;">
+		  <a class="item" href="javascript:location.reload(true)">
+              Refresh Map
+            </a>
+            <a class="item" href="geo:53,-9?saddr=(53,-9)&daddr=(42,4)" target="_blank">
+              Launch Navigation
+            </a>
+           <a ng-controller="MapCtrl" ng-click="centerOnMe()" class="item">Find Me</a>
+            </a>
+            <a class="item" href="https://www.google.com/maps/d/embed?mid=znZkIXhEVX8E.keN1jfQOL10Y&hl=en" target="_blank">
+              See All Locations
+            </a>
+            
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+ 
+    <script id="templates/nav-stack.html" type="text/ng-template">
+      <ion-view title="Tab Nav Stack">
+        <ion-content class="padding">
+          <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="templates/contact.html" type="text/ng-template">
+			<div class="bar bar-dark bar-positive bar-header">
+ 
+  <div class="h1 title">Bookings</div>
+  <button class="button button-clear button icon ion-ios7-refresh-empty"></button>
+</div>
+      <ion-view title="Bookings">
+	  
+        <ion-content>
+		<style>
+		
+		
+		
+		/* Responsive iFrame Calendar */
+ 
+.responsive-iframe-container {
+    position: relative;
+    margin-bottom:none;
+	margin-top:-10%;
+    padding-top: none;
+    height: 100%;
+    overflow: hidden;
+}
+ 
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.iframeholder
+{
+position:fixed;
+       min-width: 320px;
+    min-height: 480px;
+	max-width:100%;
+	max-height:960px;
+margin-top:0;
+height: 100%;
+width: 100%;
+z-index:0;
+}
+.navbgimg{
+background-image:url('smokebg.jpg');
+height:105%;
+opacity:.7;
+}
+
+		</style>
+		
+    <div class="iframeholder">
+
+<iframe  src="https://www.google.com/calendar/embed?src=lanceperlichtattoos%40gmail.com&ctz=America/New_York" style=" border-width:0 " width="100%" height="130%" frameborder="0" scrolling="no"></iframe>
 
 
-  <script>
-    var mySwiper = new Swiper('.swiper-container',{
-      progress:true,
-      onProgressChange: function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          var slide = swiper.slides[i];
-          var progress = slide.progress;
-          var rotate = -90*progress;
-          if (rotate<-90) rotate=-90;
-          if (rotate>90) rotate=90;
-          var translate = progress*swiper.width/2;  
-          var opacity = 1 - Math.min(Math.abs(progress),1);
-          slide.style.opacity = opacity;
-          swiper.setTransform(slide,'rotateY('+rotate+'deg) translate3d('+translate+'px,0,0)');
-        }
-      },
-      onTouchStart:function(swiper){
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], 0);
-        }
-      },
-      onSetWrapperTransition: function(swiper) {
-        for (var i = 0; i < swiper.slides.length; i++){
-          swiper.setTransition(swiper.slides[i], swiper.params.speed);
-        }
-      }
-    })
-  </script>
-				
-				</div>
-		</section>
+</div>
+
+        </ion-content>
+		  <ion-footer-bar class="bar-dark">
+       <h1 class="title">Open Monday-Saturday 11am-10pm</h1>
+    </ion-footer-bar>
+      </ion-view>
+    </script>
+	
+	
+	 <script id="popup-template.html" type="text/ng-template">
+      <input ng-model="data.wifi" type="text" placeholder="Password">
+    </script>
+
+	
+	    <script id="templates/map.html" type="text/ng-template" >
+		<div class="bar bar-dark bar-positive bar-header">
+ 
+  <div class="h1 title">More..</div>
+   <button class="hide button button-icon icon ion-home"></button>
+</div>
+      <ion-view title="More" ng-controller="PopupCtrl">
+        <ion-content class="padding" style="padding-top:4.5em;" >
 		
-		
-		
-		
-		
-		<nav>
-		<div class="navbgimg">
-		<div class="navbtnholder">
-				<button id="btn1" class="active" data-vin="view-home"  data-sd="sr">
-				<div class="fa fa-book fa-2x"></div>
-				<!--<div class="btn-icon" style="-webkit-mask-image: url(skull.svg);"></div>-->
-				<div class="label">Portfolio</div>
-			</button>
+		<div class="list card" >
+
+  <a class="item item-icon-left" ng-click="showAlert()">
+    <i class="icon ion-ios7-personadd"></i>
+    Artist Bio
+  </a>
+ <!--<a  class="item item-icon-left" ng-click="showPopup()" >
+    <i class="icon ion-ios7-calendar" ></i>
+    Events Calendar
+  </a>-->
+  <!--<a  class="item item-icon-left" ng-click="showPopup()" >
+    <i class="icon ion-ios7-cloud-upload" ></i>
+    Share this App
+  </a>-->
+
+  <!--<a class="item item-icon-left" ng-click="showConfirm()">
+    <i class="icon ion-ios7-chatboxes"></i>
+    Contact Artist
+  </a>-->
+
+  <a href="http://lanceperlichtattoos.com" class="item item-icon-left">
+    <i class="icon ion-ios7-pricetags" ></i>
+    Visit Website
+  </a>
+
+</div>
+         <ul class="list card">
+               <a class="item item-icon-left" ng-click="showConfirm()">
+    <i class="icon ion-ios7-world"></i>
+    QR-Discount
+  </a>
+
+  <!-- <a class="item item-icon-left">
+   <i class="icon ion-ios7-information" ></i>
+    About this App
+  </a>-->
+            </ul>
+         
+        </ion-content>
+      </ion-view>
+    </script>
+	
+	
+	
+
+  </body>
+</html>
+
+	<script src='js/jquery.min.js'></script>
+	<script src='jquery.zoom.js'></script>
+  <script src="js/index.js"></script>
+  		  <script>
+	$(window).ready(function(){
 			
-				<button id="btn5" data-vin="view-tab7" data-sd="sr">
-				<div class="fa fa-pencil fa-2x"></div>
-            	<div class="label">Art</div>
-			</button>
-			
-			<button id="btn4" data-vin="view-tab4"  data-sd="sr">
-				<div class="fa fa-calendar fa-2x"></div>
-				<div class="label">Calendar</div>
-			</button>
-			<button id="btn3" data-vin="view-tab3"  data-sd="sr">
-				<div  class="fa fa-map-marker fa-2x"></div>
-				<div class="label">Map</div>
-			</button>
-		
-			</div>
-			</div>
-		</nav>
-	
-	<script type="text/javascript">
-<!--
-    function toggle_visibility(more) {
-       var e = document.getElementById(more);
-       if(e.style.display == 'none')
-          e.style.display = 'row';
-       else
-          e.style.display = 'none';
-    }
-//-->
-</script>
-	
-	</body>
+			$('#ex1').zoom({ on:'grab' });
+			$('#ex2').zoom({ on:'grab' });
+			$('#ex3').zoom({ on:'grab' });
+			$('#ex4').zoom({ on:'grab' });
+			$('#ex5').zoom({ on:'grab' });
+			$('#ex6').zoom({ on:'grab' });
+			$('#ex7').zoom({ on:'grab' });
+			$('#ex8').zoom({ on:'grab' });
+			$('#ex9').zoom({ on:'grab' });
+			$('#ex10').zoom({ on:'grab' });
+			$('#ex11').zoom({ on:'grab' });
+			$('#ex12').zoom({ on:'grab' });
+			$('#ex13').zoom({ on:'grab' });
+			$('#ex14').zoom({ on:'grab' });
+			$('#ex15').zoom({ on:'grab' });
+			$('#ex16').zoom({ on:'grab' });
+			$('#ex17').zoom({ on:'grab' });
+			$('#ex18').zoom({ on:'grab' });
+			$('#ex19').zoom({ on:'grab' });
+			$('#ex20').zoom({ on:'grab' });
+			$('#ex21').zoom({ on:'grab' });
+			$('#ex22').zoom({ on:'grab' });
+			$('#ex23').zoom({ on:'grab' });
+			$('#ex24').zoom({ on:'grab' });
+			$('#ex25').zoom({ on:'grab' });
+			$('#ex26').zoom({ on:'grab' });
+			$('#ex27').zoom({ on:'grab' });
+			$('#ex28').zoom({ on:'grab' });
+			$('#ex29').zoom({ on:'grab' });
+			$('#ex30').zoom({ on:'grab' });
 
+		});
+		</script>
 	
+</body>
+
 </html>
